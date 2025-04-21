@@ -1,11 +1,17 @@
 import './globals.css'
-import {Montserrat_Alternates, Montserrat} from "next/font/google"
+import {Montserrat_Alternates, Montserrat,Assistant} from "next/font/google"
 import { Metadata } from 'next'
 import { ReactNode } from 'react'
 import Header from './components/Header'
 import Footer from './components/Footer'
 
 export const montserratAlternates = Montserrat_Alternates({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
+})
+
+export const assistant = Assistant({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
   display: 'swap',
@@ -25,7 +31,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="es">
-      <body className={`bg-secondary ${montserrat.className}`}>
+      <body className={`bg-secondary py-32 ${montserrat.className}`}>
         <Header />
         {children}
         <Footer />
