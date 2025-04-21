@@ -1,5 +1,5 @@
 import Link from "next/link";
-import CardPayment from "./components/icons/CardPayment";
+import PaymentsTable from "./components/PaymentsTable";
 import Opinions from "./components/home/Opinions";
 import Periodos from "./components/home/Periodos";
 import Destacados from "./components/home/Destacados";
@@ -20,30 +20,7 @@ export default function Home() {
         <img src="/bg-home1.png" className="mt-10" alt="background" />
       </section>
       <Periodos />
-      <section className="my-5 bg-tertiary" id="payments">
-        <ul className="flex justify-between px-10 py-2 pt-3 text-sm text-secondary">
-          <li className="flex flex-col items-center justify-center gap-1">
-            <CardPayment />
-            <p>Efectivo</p>
-          </li>
-          <li className="flex flex-col items-center justify-center gap-1">
-            <CardPayment />
-            <p>Transferencia</p>
-          </li>
-          <li className="flex flex-col items-center justify-center gap-1">
-            <CardPayment />    
-            <p>Mercado Pago</p>
-          </li>
-          <li className="flex flex-col items-center justify-center gap-1">
-            <CardPayment />         
-            <p>Tarjeta de credito</p>
-          </li>
-          <li className="flex flex-col items-center justify-center gap-1">
-          <CardPayment />
-            <p>Tarjeta de debito</p>
-          </li>
-        </ul>
-      </section>
+      <PaymentsTable />
       <section className="flex flex-col items-center justify-center px-20 my-5 xl:flex-row" id="viajar">
         <img src="/viajar-image.png" className="object-cover" alt="viajar" />
         <p className="font-medium md:h-full xl:max-w-[500px] text-lg mx-auto">Viajar no es solo cambiar de lugar, es cambiar la energía. Es abrir los ojos a nuevas culturas, descubrir paisajes que solo viste en fotos, y vivir momentos que se quedan para siempre. Ya sea que sueñes con recorrer la inmensidad de nuestra querida Argentina o quieras explorar destinos lejanos como Europa, el Caribe o Asia, cada viaje es una oportunidad única de conectar con el mundo y con vos mismo.

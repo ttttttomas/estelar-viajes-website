@@ -15,7 +15,7 @@ export default function Header() {
         <ul className={`flex items-center gap-16 ${montserratAlternates.className} text-tertiary font-semibold`}>
             <Link href="/">Inicio</Link>
             <Link href="/travel-packages">Viajes</Link>
-            <Link href="/">¿Quienes Somos?</Link>
+            <Link href="/about-us">¿Quienes Somos?</Link>
             <Link href="/">Contacto</Link>
 
         </ul>

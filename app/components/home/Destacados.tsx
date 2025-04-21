@@ -67,8 +67,8 @@ export default function Destacados() {
     };
         
   return (
-    <section className="mt-5" id="destacados">
-        <p className="font-semibold text-2xl text-center my-10">NUESTROS PAQUETES DESTACADOS</p>
+    <section className="py-20" id="destacados">
+        <p className="my-10 text-2xl font-semibold text-center">NUESTROS PAQUETES DESTACADOS</p>
         <ul 
          ref={carouselRef}
          onMouseDown={handleMouseDown}
@@ -78,11 +78,11 @@ export default function Destacados() {
          onTouchStart={handleTouchStart}
          onTouchMove={handleTouchMove}
          onTouchEnd={handleTouchEnd}
-         className="flex flex-col md:flex-row flex-nowrap gap-20 px-20 overflow-x-scroll">
+         className="flex flex-col gap-20 px-20 overflow-x-scroll md:flex-row flex-nowrap">
             {[...Array(6)].map((_, i) => (
                  <Link key={i} className="bg-paquete h-[200px] min-w-[400px] relative rounded-2xl shadow-black/50 shadow-md" href="/">
                      <CalendarDay day={i+1} month={"Enero"} />
-                     <p className="absolute text-white font-bold text-center right-0 top-22 left-0 text-xl xl:text-3xl">MAR DEL PLATA</p>  
+                     <p className="absolute left-0 right-0 text-xl font-bold text-center text-white top-22 xl:text-3xl">MAR DEL PLATA</p>  
                  </Link>
             ))}
         </ul>
