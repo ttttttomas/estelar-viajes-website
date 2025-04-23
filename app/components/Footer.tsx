@@ -5,16 +5,16 @@ export default function Footer() {
   return (
     <footer className='absolute flex flex-col flex-wrap items-center justify-between w-full text-black bg-white gap-y-5'>
       <ul className='flex flex-wrap items-center justify-between w-full px-16 py-5 text-white underline gap-y-5 bg-tertiary'>
-        <Link href="/documentacion">
+        <Link href="/documentation">
           <li>● Documentación para salir del país</li>
         </Link>      
-        <Link href="/cancelacion">
+        <Link href="/cancelation">
           <li>● Política de cancelación</li>
         </Link>
-        <Link href="/terminos">
+        <Link href="/terms">
           <li>● Términos y condiciones</li>
         </Link>
-        <Link href="/privacidad">
+        <Link href="/privacity">
           <li>● Política de privacidad y menores</li>
         </Link>
         <Link href="/cartelera">

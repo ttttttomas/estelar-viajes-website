@@ -16,7 +16,7 @@ export default function Header() {
             <Link href="/">Inicio</Link>
             <Link href="/travel-packages">Viajes</Link>
             <Link href="/about-us">¿Quienes Somos?</Link>
-            <Link href="/">Contacto</Link>
+            <Link href="/contact">Contacto</Link>
 
         </ul>
     </header>
