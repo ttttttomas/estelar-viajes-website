@@ -1,6 +1,6 @@
-import Link from 'next/link'
 import Logo from './Logo'
 import {montserratAlternates} from '@/app/layout'
+import List from './HeaderList'
 
 export default function Header() {
   return (
@@ -12,13 +12,7 @@ export default function Header() {
                 <small className='font-medium text-black/60 '>by Mundo Terramar S.R.L</small>
             </div>
         </div>
-        <ul className={`flex items-center gap-16 ${montserratAlternates.className} text-tertiary font-semibold`}>
-            <Link href="/">Inicio</Link>
-            <Link href="/travel-packages">Viajes</Link>
-            <Link href="/about-us">¿Quienes Somos?</Link>
-            <Link href="/contact">Contacto</Link>
-
-        </ul>
+        <List />
     </header>
   )
 }

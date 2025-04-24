@@ -1,5 +1,8 @@
 import Link from 'next/link'
-import CardPayment from './icons/CardPayment'
+import Transport from './icons/Transport'
+import Days from './icons/Days'
+import Nights from './icons/Nights'
+import Des from './icons/Des'
 
 export default function PackageCard() {
   return (
@@ -21,19 +24,19 @@ export default function PackageCard() {
                 <div className='pl-2 border-l border-gray-400 border-dashed'>
                     <ul className='flex flex-col items-center justify-center gap-5 text-xs text-nowrap'>
                         <li className='flex flex-col items-center gap-2'>
-                            <CardPayment />
+                            <Transport />
                             <p>Bus semicama</p>
                         </li>
                         <li className='flex flex-col items-center gap-2'>
-                            <CardPayment />
+                            <Days />
                             <p>Bus semicama</p>
                         </li>
                         <li className='flex flex-col items-center gap-2'>
-                            <CardPayment />
+                            <Nights />
                             <p>Bus semicama</p>
                         </li>
                         <li className='flex flex-col items-center gap-2'>
-                            <CardPayment />
+                            <Des />
                             <p>Bus semicama</p>
                         </li>
                     </ul>

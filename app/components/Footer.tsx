@@ -1,9 +1,16 @@
 import Link from 'next/link'
 import Logo from './Logo'
+import Cell from './icons/Cell'
+import Buzon from './icons/Buzon'
+import Home from './icons/Home'
+import Persona1 from './icons/Persona1'
+import Persona2 from './icons/Persona2'
+import Contact from './icons/Contact'
+import { moonDance } from '../layout'
 
 export default function Footer() {
   return (
-    <footer className='absolute flex flex-col flex-wrap items-center justify-between w-full text-black bg-white gap-y-5'>
+    <footer className='absolute z-0 flex flex-col flex-wrap items-center justify-between w-full text-black bg-white gap-y-5'>
       <ul className='flex flex-wrap items-center justify-between w-full px-16 py-5 text-white underline gap-y-5 bg-tertiary'>
         <Link href="/documentation">
           <li>● Documentación para salir del país</li>
@@ -27,24 +34,42 @@ export default function Footer() {
             <img src="/ministerio.png" alt="Logo"/>
         </div>
         <ul className='flex flex-col justify-between'>
-            <p className='text-xl font-bold'>Contacto</p>
-            <li>11-6521-6518</li>
-            <li>reservas@estelarviajes.com</li>
-            <li>info@estelarviajes.com</li>
+            <p className='text-xl font-bold'>
+              Contacto</p>
+            <li className='flex items-center gap-5'>
+              <Cell />
+              
+              11-6521-6518</li>
+            <li className='flex items-center gap-5'>
+              <Buzon />
+              
+              reservas@estelarviajes.com</li>
+            <li className='flex items-center gap-5'>
+              <Buzon />
+              
+              info@estelarviajes.com</li>
         </ul>
         <ul className='flex flex-col justify-between'>
             <p className='text-xl font-bold'>Mapa del sitio</p>
-            <Link className='underline' href="/">Inicio</Link>
-            <Link className='underline' href="/">Paquetes</Link>
-            <Link className='underline' href="/">¿Quienes Somos?</Link>
-            <Link className='underline' href="/">Contacto</Link>
+            <Link className='flex items-center gap-5 underline' href="/">
+            <Home />
+            Inicio</Link>
+            <Link className='flex items-center gap-5 underline' href="/">
+            <Persona1 />
+            Paquetes</Link>
+            <Link className='flex items-center gap-5 underline' href="/">
+            <Persona2 />
+            ¿Quienes Somos?</Link>
+            <Link className='flex items-center gap-5 underline' href="/">
+            <Contact />
+            Contacto</Link>
         </ul>
       </section>
       <div className="flex flex-col items-center justify-center gap-5 mt-5">
-                   <p className={`text-lg`}>Razon social: MUNDO TERRAMAR S.R.L - Cuit: 30-71637562-1 </p> 
-                   <Link href="https://iwebtecnology.com/" target="_blank" className="flex items-center justify-center">
+                   <p className={`text-xl ${moonDance.className}`}>Razon social: MUNDO TERRAMAR S.R.L - Cuit: 30-71637562-1 </p> 
+                   <Link href="https://iwebtecnology.com" target="_blank" className="flex items-center justify-center">
                       <p>Desarrollado por</p>
-                      <img src="/iWeb.png" alt="Logo" width="121"/>
+                      <img src="/iweb.png" alt="Logo" width="121"/>
                     </Link>
                 </div>
     </footer>
