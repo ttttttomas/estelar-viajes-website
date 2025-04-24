@@ -4,7 +4,6 @@ import Instagram from './icons/redes/Instagram'
 import Facebook from './icons/redes/Facebook'
 import Wpp from './icons/redes/Wpp'
 import Arrow from './icons/Arrow'
-
 import Link from 'next/link'
 
 export default function Redes() {
