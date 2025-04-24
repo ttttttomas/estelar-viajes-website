@@ -1,8 +1,8 @@
 'use client'
 import { useState } from 'react'
-import Instagram from './icons/redes/Instagram'
-import Facebook from './icons/redes/Facebook'
-import Wpp from './icons/redes/Wpp'
+import Instagram from './icons/Redes/Instagram'
+import Facebook from './icons/Redes/Facebook'
+import Wpp from './icons/Redes/Wpp'
 import Arrow from './icons/Arrow'
 import Link from 'next/link'
 
