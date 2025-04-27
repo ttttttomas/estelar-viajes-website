@@ -54,13 +54,13 @@ export default function Footer() {
             <Link className='flex items-center gap-5 underline' href="/">
             <Home />
             Inicio</Link>
-            <Link className='flex items-center gap-5 underline' href="/">
+            <Link className='flex items-center gap-5 underline' href="/travel-packages">
             <Persona1 />
             Paquetes</Link>
-            <Link className='flex items-center gap-5 underline' href="/">
+            <Link className='flex items-center gap-5 underline' href="/about-us">
             <Persona2 />
             ¿Quienes Somos?</Link>
-            <Link className='flex items-center gap-5 underline' href="/">
+            <Link className='flex items-center gap-5 underline' href="/contact">
             <Contact />
             Contacto</Link>
         </ul>

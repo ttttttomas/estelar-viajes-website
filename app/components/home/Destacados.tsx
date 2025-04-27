@@ -1,18 +1,33 @@
 'use client'
 import CalendarDay from "../CalendarCard";
 import Link from "next/link";
-import {useState, useRef} from "react";
+import {useState, useRef, useEffect} from "react";
 
 export default function Destacados() {
     const [isDragging, setIsDragging] = useState<boolean>(false);
     const [startX, setStartX] = useState<number>(0);
     const [scrollLeft, setScrollLeft] = useState<number>(0);
     const carouselRef = useRef<HTMLUListElement>(null);
+    const [isDraggable, setIsDraggable] = useState(true);
+
+useEffect(() => {
+  const handleResize = () => {
+    // Por ejemplo, si el ancho es menor a 768px, lo consideramos mobile
+    setIsDraggable(window.innerWidth >= 768);
+  };
+
+  handleResize(); // Ejecutar al montar
+  window.addEventListener('resize', handleResize);
+  return () => window.removeEventListener('resize', handleResize);
+}, []);
+
+
   
   
     const handleMouseDown = (e: React.MouseEvent<HTMLUListElement>) => {
+      // if (!isDraggable || !isDragging || !carouselRef.current) return;
       if (!carouselRef.current) return;
-      
+
       setIsDragging(true);
       setStartX(e.pageX - carouselRef.current.offsetLeft);
       setScrollLeft(carouselRef.current.scrollLeft);
@@ -23,17 +38,22 @@ export default function Destacados() {
     };
   
     const handleMouseLeave = () => {
+      if (!isDraggable || !isDragging || !carouselRef.current) return;
+
       setIsDragging(false);
       resetStyles();
+      
     };
   
     const handleMouseUp = () => {
+      if (!isDraggable || !isDragging || !carouselRef.current) return;
+
       setIsDragging(false);
       resetStyles();
     };
   
     const handleMouseMove = (e: React.MouseEvent<HTMLUListElement>) => {
-      if (!isDragging || !carouselRef.current) return;
+      if (!isDraggable || !isDragging || !carouselRef.current) return;
       e.preventDefault();
       
       const x = e.pageX - carouselRef.current.offsetLeft;
@@ -42,6 +62,8 @@ export default function Destacados() {
     };
   
     const handleTouchStart = (e: React.TouchEvent<HTMLUListElement>) => {
+      if (!isDraggable || !isDragging || !carouselRef.current) return;
+
       if (!carouselRef.current) return;
       
       setIsDragging(true);
@@ -50,6 +72,8 @@ export default function Destacados() {
     };
   
     const handleTouchMove = (e: React.TouchEvent<HTMLUListElement>) => {
+      if (!isDraggable || !isDragging || !carouselRef.current) return;
+
       if (!isDragging || !carouselRef.current) return;
       
       const x = e.touches[0].pageX - carouselRef.current.offsetLeft;
@@ -58,10 +82,13 @@ export default function Destacados() {
     };
   
     const handleTouchEnd = () => {
+      if (!isDraggable || !isDragging || !carouselRef.current) return;
+
       setIsDragging(false);
     };
   
     const resetStyles = () => {
+      
       document.body.style.cursor = '';
       document.body.style.userSelect = '';
     };
@@ -78,7 +105,7 @@ export default function Destacados() {
          onTouchStart={handleTouchStart}
          onTouchMove={handleTouchMove}
          onTouchEnd={handleTouchEnd}
-         className="flex flex-col gap-20 px-20 overflow-x-scroll md:flex-row flex-nowrap">
+         className="flex flex-col items-center gap-20 px-20 md:overflow-x-scroll md:flex-row flex-nowrap">
             {[...Array(6)].map((_, i) => (
                  <Link key={i} className="bg-paquete h-[200px] min-w-[400px] relative rounded-2xl shadow-black/50 shadow-md" href="/">
                      <CalendarDay day={i+1} month={"Enero"} />

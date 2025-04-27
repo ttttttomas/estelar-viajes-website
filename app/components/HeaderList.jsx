@@ -1,8 +1,10 @@
 'use client'
 import Link from "next/link"
+import Router from "next/router";
 import { useState } from "react"
 
 export default function HeaderList() {
+
     const [show, setShow] = useState(false);
     const handleClick = () =>{
         setShow(!show);
@@ -17,9 +19,9 @@ export default function HeaderList() {
             <Link href="/contact">Contacto</Link>
         </ul>
     <div className={show ? "absolute flex flex-col cursor-pointer items-center gap-2 px-2 py-1 top-20 right-135" : "hidden"}>
-        <Link className='w-32 p-1 border rounded-lg cursor-pointer text-tertiary bg-secondary border-tertiary' href="/travel-packages">Semana Santa</Link>
-        <Link className='w-32 p-1 text-center border rounded-lg cursor-pointer text-tertiary bg-secondary border-tertiary' href="/travel-packages">Sierras</Link>
-        <Link className='w-32 p-1 text-center border rounded-lg cursor-pointer text-tertiary bg-secondary border-tertiary' href="/travel-packages">Costas</Link>
+        <Link onClick={() => setShow(!show)} className='w-32 p-1 border rounded-lg cursor-pointer text-tertiary bg-secondary border-tertiary' href="/travel-packages">Semana Santa</Link>
+        <Link onClick={() => setShow(!show)} className='w-32 p-1 text-center border rounded-lg cursor-pointer text-tertiary bg-secondary border-tertiary' href="/travel-packages">Sierras</Link>
+        <Link onClick={() => setShow(!show)} className='w-32 p-1 text-center border rounded-lg cursor-pointer text-tertiary bg-secondary border-tertiary' href="/travel-packages">Costas</Link>
     </div>
     </>
   )

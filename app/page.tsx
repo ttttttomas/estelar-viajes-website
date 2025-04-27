@@ -3,6 +3,7 @@ import PaymentsTable from "./components/PaymentsTable";
 import Opinions from "./components/home/Opinions";
 import Periodos from "./components/home/Periodos";
 import Destacados from "./components/home/Destacados";
+import Carrusel from "./components/home/Carrusel";
 
 
 export default function Home() {
@@ -16,9 +17,7 @@ export default function Home() {
         <Link href="#clients">Clientes</Link>
         <Link href="#destacados">Destacados</Link>
       </ul>
-      <section id="bg">
-        <img src="/bg-home1.png" className="mt-10" alt="background" />
-      </section>
+      <Carrusel />
       <Periodos />
       <PaymentsTable />
       <section className="flex flex-col items-center justify-center px-20 my-5 xl:flex-row" id="viajar">

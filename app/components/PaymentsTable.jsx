@@ -6,7 +6,7 @@ import Mp from './icons/Mp'
 export default function PaymentsTable() {
   return (
     <section className="my-5 bg-tertiary" id="payments">
-        <ul className="flex justify-between px-10 py-2 pt-3 text-sm text-secondary">
+        <ul className="flex items-center justify-between gap-2 px-2 py-2 pt-3 text-xs md:gap-0 md:px-10 md:text-sm text-secondary">
           <li className="flex flex-col items-center justify-start">
             <Efectivo />
             <p>Efectivo</p>
@@ -17,15 +17,15 @@ export default function PaymentsTable() {
           </li>
           <li className="flex flex-col items-center justify-start gap-">
             <Mp />    
-            <p>Mercado Pago</p>
+            <p className='text-center'>Mercado Pago</p>
           </li>
           <li className="flex flex-col items-center justify-center gap-3">
             <CardPayment color={"white"} />         
-            <p>Tarjeta de credito</p>
+            <p className='text-center'>Tarjeta de credito</p>
           </li>
           <li className="flex flex-col items-center justify-center gap-3">
           <CardPayment color={"white"} />
-            <p>Tarjeta de debito</p>
+            <p className='text-center'>Tarjeta de debito</p>
           </li>
         </ul>
       </section>

@@ -14,8 +14,8 @@ export default function Redes() {
 
   return (
     <>
-        <div onClick={handleClick} className={show ? "w-5 h-5 top-[57%] cursor-pointer z-10 right-15 fixed transition-all" : "w-5 h-5 top-[57%] cursor-pointer right-2 fixed transition-all"}>
-            <div className={show ? "rotate-180 transition-all z-20" : "transition-all z-20"}>
+        <div onClick={handleClick} className={show ? "w-5 h-5 top-[57%] cursor-pointer z-10 right-15 fixed transition-all" : "w-5 h-5 top-[57%] z-10 cursor-pointer right-2 fixed transition-all"}>
+            <div className={show ? "rotate-180 transition-all z-20" : "transition-all z-10"}>
                 <Arrow />
             </div>
         </div>
