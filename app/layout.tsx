@@ -5,6 +5,8 @@ import { ReactNode } from 'react'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Redes from './components/Redes'
+import AsideContextProvider from './context/AsideContext'
+import Aside from './components/Aside'
 
 export const montserratAlternates = Montserrat_Alternates({
   subsets: ['latin'],
@@ -37,10 +39,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="es">
       <body className={`bg-secondary py-32 ${montserrat.className}`}>
+        <AsideContextProvider>
         <Header />
+        <Aside />
         {children}
         <Redes />
         <Footer />
+        </AsideContextProvider>
         </body>
     </html>
   )

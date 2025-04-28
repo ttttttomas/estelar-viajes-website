@@ -17,7 +17,7 @@ export default function PackageCard() {
                     <b className='pl-5 font-semibold text-md'>Salida: 17/04/2025</b>
                     <div className='flex flex-col items-center w-full'>
                         <small className='text-xs'>desde</small>
-                        <p className='text-[40px] font-bold text-tertiary'>$ 175.000.-</p>
+                        <p className='md:text-[40px] text-4xl font-bold text-tertiary'>$ 175.000.-</p>
                         <small className='text-xs'>+ $ 5.000.-</small>
                     </div>
                 </div>

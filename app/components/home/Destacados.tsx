@@ -94,7 +94,7 @@ useEffect(() => {
     };
         
   return (
-    <section className="py-20" id="destacados">
+    <section id="destacados">
         <p className="my-10 text-2xl font-semibold text-center">NUESTROS PAQUETES DESTACADOS</p>
         <ul 
          ref={carouselRef}
@@ -105,7 +105,7 @@ useEffect(() => {
          onTouchStart={handleTouchStart}
          onTouchMove={handleTouchMove}
          onTouchEnd={handleTouchEnd}
-         className="flex flex-col items-center gap-20 px-20 md:overflow-x-scroll md:flex-row flex-nowrap">
+         className="flex flex-col items-center gap-20 mx-2 overflow-hidden md:mx-0 md:overflow-x-scroll md:flex-row flex-nowrap">
             {[...Array(6)].map((_, i) => (
                  <Link key={i} className="bg-paquete h-[200px] min-w-[400px] relative rounded-2xl shadow-black/50 shadow-md" href="/">
                      <CalendarDay day={i+1} month={"Enero"} />

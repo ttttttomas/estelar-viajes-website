@@ -28,12 +28,12 @@ export default function Footer() {
           <li>● Cartelera</li>
         </Link>
       </ul>
-      <section className='flex justify-between w-full px-20'>
+      <section className='flex flex-col justify-between w-full gap-10 px-20 md:gap-0 md:flex-row'>
         <div className='flex flex-col gap-2'>
             <Logo w="200px" />
             <img src="/ministerio.png" alt="Logo"/>
         </div>
-        <ul className='flex flex-col justify-between'>
+        <ul className='flex flex-col justify-between gap-5 md:gap-0'>
             <p className='text-xl font-bold'>
               Contacto</p>
             <li className='flex items-center gap-5'>
@@ -49,29 +49,29 @@ export default function Footer() {
               
               info@estelarviajes.com</li>
         </ul>
-        <ul className='flex flex-col justify-between'>
+        <ul className='flex flex-col justify-between gap-5 md:gap-0'>
             <p className='text-xl font-bold'>Mapa del sitio</p>
             <Link className='flex items-center gap-5 underline' href="/">
-            <Home />
+            <Home fill={"black"}/>
             Inicio</Link>
             <Link className='flex items-center gap-5 underline' href="/travel-packages">
-            <Persona1 />
+            <Persona1 fill={"black"} />
             Paquetes</Link>
             <Link className='flex items-center gap-5 underline' href="/about-us">
-            <Persona2 />
+            <Persona2 fill={"black"} />
             ¿Quienes Somos?</Link>
             <Link className='flex items-center gap-5 underline' href="/contact">
-            <Contact />
+            <Contact fill={"black"} />
             Contacto</Link>
         </ul>
       </section>
       <div className="flex flex-col items-center justify-center gap-5 mt-5">
-                   <p className={`text-xl ${moonDance.className}`}>Razon social: MUNDO TERRAMAR S.R.L - Cuit: 30-71637562-1 </p> 
+                   <p className={`md:text-xl ${moonDance.className}`}>Razon social: MUNDO TERRAMAR S.R.L - Cuit: 30-71637562-1 </p> 
                    <Link href="https://iwebtecnology.com" target="_blank" className="flex items-center justify-center">
                       <p>Desarrollado por</p>
                       <img src="/iweb.png" alt="Logo" width="121"/>
                     </Link>
-                </div>
+      </div>
     </footer>
   )
 }

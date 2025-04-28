@@ -1,6 +1,5 @@
 'use client'
 import Link from "next/link"
-import Router from "next/router";
 import { useState } from "react"
 
 export default function HeaderList() {
@@ -11,7 +10,7 @@ export default function HeaderList() {
         console.log(show)
     }
   return (
-    <>
+    <div className="hidden xl:block">
     <ul className={`flex items-center gap-16 text-tertiary font-semibold`}>
             <Link href="/">Inicio</Link>
             <p className="cursor-pointer" onClick={handleClick}>Paquetes</p>
@@ -23,6 +22,6 @@ export default function HeaderList() {
         <Link onClick={() => setShow(!show)} className='w-32 p-1 text-center border rounded-lg cursor-pointer text-tertiary bg-secondary border-tertiary' href="/travel-packages">Sierras</Link>
         <Link onClick={() => setShow(!show)} className='w-32 p-1 text-center border rounded-lg cursor-pointer text-tertiary bg-secondary border-tertiary' href="/travel-packages">Costas</Link>
     </div>
-    </>
+    </div>
   )
 }
