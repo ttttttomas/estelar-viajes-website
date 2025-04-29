@@ -34,9 +34,9 @@ export default function Carrusel() {
         "/bg-home3.webp",
     ]
     const imagesMobile = [
-        "/bg-home1mobile.png",
-        "/bg-home2mobile.png",
-        "/bg-home3mobile.png",
+        "/bg-home1mobile.webp",
+        "/bg-home2mobile.webp",
+        "/bg-home3mobile.webp",
     ]
   return (
     <section className='relative w-full h-full '>
@@ -46,7 +46,7 @@ export default function Carrusel() {
             alt="background"
             className="object-cover w-full h-[300px] md:h-[500px]" />
         </div>
-        <div className="absolute top-[250px] md:top-[480px] md:left-2 left-0 md:right-auto right-0 flex gap-3 items-center justify-center">
+        <div className="absolute top-[10px] md:top-[480px] md:left-2 left-0 md:right-auto right-0 flex gap-3 items-center justify-center">
             <div onClick={() => handleImageChange(0)} className="cursor-pointer">
             <Circle fill={index === 0 ? "black" : "none"}/>
             </div>

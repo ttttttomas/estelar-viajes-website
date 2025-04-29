@@ -53,11 +53,11 @@ export default function AsideClient() {
                             <Link onClick={handleClick} href="/travel-packages">Sierras</Link>
                             <Link onClick={handleClick} href="/travel-packages">Costas</Link>
                         </ul>
-                    <Link onClick={handleClick} className='flex items-center gap-3 pb-3 border-b border-black border-dashed' href="/">
+                    <Link onClick={handleClick} className='flex items-center gap-3 pb-3 border-b border-black border-dashed' href="/about-us">
                         <Persona2 fill={"white"} />
                         <p className="font-medium text-white text-md">Sobre nosotros</p>
                     </Link>
-                    <Link onClick={handleClick} className='flex items-center gap-3 ' href="/">
+                    <Link onClick={handleClick} className='flex items-center gap-3 ' href="/contact">
                         <Contact fill={"white"} />
                         <p className="font-medium text-white text-md">Contacto</p>
                     </Link>
@@ -71,9 +71,9 @@ export default function AsideClient() {
                         <Instagram />
                         <p>estelarviajes.sanber</p>
                     </Link>
-                    <Link target='_blank' className='flex items-center gap-3 text-sm' href="https://wa.me/+5411652165186">
+                    <Link target='_blank' className='flex items-center gap-3 text-sm' href="https://api.whatsapp.com/send?phone=5491165216518&text=Hola! te escribo desde la pagina web para saber información acerca de:">
                         <Wpp />
-                        <p>+54 9 11 65-21-6518</p>
+                        <p>+54 9 11-6521-6518</p>
                     </Link>
                 </ul>
                 <div className='flex items-center justify-center gap-5 mt-5'>

@@ -36,31 +36,31 @@ export default function Footer() {
         <ul className='flex flex-col justify-between gap-5 md:gap-0'>
             <p className='text-xl font-bold'>
               Contacto</p>
-            <li className='flex items-center gap-5'>
+            <li className='flex items-center gap-5 text-sm md:text-normal'>
               <Cell />
               
               11-6521-6518</li>
-            <li className='flex items-center gap-5'>
+            <li className='flex items-center gap-5 text-sm md:text-normal'>
               <Buzon />
               
               reservas@estelarviajes.com</li>
-            <li className='flex items-center gap-5'>
+            <li className='flex items-center gap-5 text-sm md:text-normal'>
               <Buzon />
               
               info@estelarviajes.com</li>
         </ul>
         <ul className='flex flex-col justify-between gap-5 md:gap-0'>
             <p className='text-xl font-bold'>Mapa del sitio</p>
-            <Link className='flex items-center gap-5 underline' href="/">
+            <Link className='flex items-center gap-5 text-sm underline md:text-medium' href="/">
             <Home fill={"black"}/>
             Inicio</Link>
-            <Link className='flex items-center gap-5 underline' href="/travel-packages">
+            <Link className='flex items-center gap-5 text-sm underline md:text-medium' href="/travel-packages">
             <Persona1 fill={"black"} />
             Paquetes</Link>
-            <Link className='flex items-center gap-5 underline' href="/about-us">
+            <Link className='flex items-center gap-5 text-sm underline md:text-medium' href="/about-us">
             <Persona2 fill={"black"} />
             ¿Quienes Somos?</Link>
-            <Link className='flex items-center gap-5 underline' href="/contact">
+            <Link className='flex items-center gap-5 text-sm underline md:text-medium' href="/contact">
             <Contact fill={"black"} />
             Contacto</Link>
         </ul>

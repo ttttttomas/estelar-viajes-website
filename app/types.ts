@@ -38,3 +38,9 @@ export type Package = {
     "tarifas4": string,
     "tarifas5": string
   }
+export type Flyers = {
+    "ID": string,
+    image: string,
+    descripcion: string,
+    periodo: string
+}

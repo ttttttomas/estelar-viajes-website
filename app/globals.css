@@ -5,6 +5,23 @@
   --color-secondary: #DDECF5;
   --color-tertiary: #38728A;
   --color-red: #ff7171;
+  --animation-loading: loading 1s ease-in-out infinite;
+}
+
+
+@keyframes loading {
+  0% {
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-20px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+.loading {
+  animation: moverArribaAbajo 2s ease-in-out infinite;
 }
 
 :root {
