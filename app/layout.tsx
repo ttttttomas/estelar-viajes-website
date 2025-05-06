@@ -33,6 +33,8 @@ export const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: 'Estelar Viajes',
   description: 'Starter with Tailwind and custom color variables',
+  keywords: [],
+  
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {

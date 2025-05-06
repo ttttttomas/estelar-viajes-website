@@ -7,7 +7,7 @@ import Des from './icons/Des'
 export default function PackageCard() {
   return (
     <Link key={2} className='h-full pb-3 overflow-hidden transition-all bg-white md:group md:hover:scale-95 max-w-80 rounded-2xl' href={'/sierras'}>
-                <img className='w-full transition-all group-hover:scale-110' src="bg-home1mobile.webp" alt="" />
+                <img className='w-full transition-all group-hover:scale-110' src="/bg-home1mobile.webp" alt="" />
                 <p className='pl-5 text-2xl font-black tracking-wide w-max pt-7 text-tertiary'>San Bernardo</p>
                 <div className='flex h-full pr-2'>
 
