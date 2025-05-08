@@ -12,7 +12,7 @@ type Cartelera = {
 
 export default async function CarteleraPage() {
 
-  const cartelera = await axios.get(`https://automotoresyrigoyen.com/api/cars`);
+  const cartelera = await axios.get(`https://api-estelar.iwebtecnology.com/cartelera`);
   console.log(cartelera.data);
   
     return (

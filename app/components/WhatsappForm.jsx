@@ -38,13 +38,13 @@ export default function ReservaForm() {
             <input {...register(`pasajeros.${index}.apellido`)} placeholder="Apellido" className="w-full px-4 py-2 text-black bg-white border rounded" required />
             <input {...register(`pasajeros.${index}.dni`)} placeholder="DNI" className="w-full px-4 py-2 text-black bg-white border rounded" required />
             {index > 0 && (
-              <button type="button" onClick={() => remove(index)} className="w-full p-1 text-white bg-red-500 rounded">
+              <button type="button" onClick={() => remove(index)} className="w-full p-1 text-white bg-red-500 rounded cursor-pointer">
                 ❌ Eliminar pasajero
               </button>
             )}
           </div>
         ))}
-        <button type="button" onClick={() => append({ nombre: "", apellido: "", dni: "" })} className="p-2 text-white bg-orange-500 rounded">
+        <button type="button" onClick={() => append({ nombre: "", apellido: "", dni: "" })} className="p-2 text-black rounded cursor-pointer bg-primary">
           ➕ Agregar pasajero
         </button>
   
@@ -54,7 +54,7 @@ export default function ReservaForm() {
         <input {...register("telefono")} type="tel" placeholder="Teléfono" className="w-full p-2 text-black bg-white border rounded" required />
         <input {...register("email")} type="email" placeholder="Correo electrónico" className="w-full p-2 text-black bg-white border rounded" required />
         
-        <button type="submit" className="p-2 text-white bg-orange-500 rounded">Enviar</button>
+        <button type="submit" className="p-2 text-white border rounded cursor-pointer hover:bg-white hover:text-black bg-tertiary">Enviar</button>
       </form>
     );
   }

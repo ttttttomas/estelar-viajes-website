@@ -1,31 +1,11 @@
-"use client";
-
-import { useEffect, useState } from "react";
-import axios from "axios";
-import { useParams } from "next/navigation";
-import WhatsappForm from '../../components/WhatsappForm'
+import axios from 'axios';
+import WhatsappForm from '../../../components/WhatsappForm'
 // import Loading from "@app/loading";
-import { Package } from "@/app/types";
 
-export default function ProductNationalPage() {
-  const [currentProduct, setCurrentProduct] = useState<Package | null>(null); // Estado para el producto actual
-  const params = useParams();
-  const id = params.id;
-  console.log(id);
-  
-
-  useEffect(() => {
-    const loadProduct = async () => {
-        const res = await axios.get(`https://backend-estelar-production.up.railway.app/products/${id}`);
-        setCurrentProduct(res.data);
-        console.log(res.data);
-    };
-
-    loadProduct();
-  }, [id]);
-
-    console.log(currentProduct);
-    
+export default async function ProductNationalPage({params}: { params: { id: string } }) {
+  console.log(params.id)
+  const response = await axios.get(`https://api-estelar.iwebtecnology.com/products/${params.id}`);
+  const currentProduct = response.data;
 
   return (
     <>

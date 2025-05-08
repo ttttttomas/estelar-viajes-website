@@ -5,7 +5,7 @@ import axios from 'axios'
 export const PackageContext = createContext()
 
 export default function PackageContextProvider({ children }) {
- const baseURL = "http://147.93.71.106:8002"
+ const baseURL = "https://api-estelar.iwebtecnology.com"
 
     const getPackages = async () => {
         const response = await axios.get(`${baseURL}/products`)
