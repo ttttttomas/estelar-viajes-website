@@ -22,6 +22,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/travel-packages/[periodo]/[id]/page.jsx", "app/components/PeriodosPack.jsx"],
   "exclude": ["node_modules"],
 }

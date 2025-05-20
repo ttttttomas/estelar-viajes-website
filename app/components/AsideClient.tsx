@@ -48,10 +48,11 @@ export default function AsideClient() {
                         <p className="font-medium text-white text-md">Paquetes</p>
                         <ArrowAside />
                     </li>
-                        <ul className={packages ? 'flex flex-col gap-1 px-5 pb-3 text-white border-b border-black border-dashed transition-all' : 'h-0 overflow-hidden transition-all border-b border-black border-dashed'}>
-                            <Link onClick={handleClick} href="/travel-packages">Semana Santa</Link>
-                            <Link onClick={handleClick} href="/travel-packages">Sierras</Link>
-                            <Link onClick={handleClick} href="/travel-packages">Costas</Link>
+                        <ul className={packages ? 'flex flex-col underline gap-1 px-5 pb-3 text-white border-b border-black border-dashed transition-all' : 'h-0 overflow-hidden transition-all border-b border-black border-dashed'}>
+                            <Link onClick={handleClick} href="/sierra">Sierras</Link>
+                            <Link onClick={handleClick} href="/cordillera">Cordillera</Link>
+                            <Link onClick={handleClick} href="/costa">Costas</Link>
+                            <Link onClick={handleClick} href="/internacional">Internacionales</Link>
                         </ul>
                     <Link onClick={handleClick} className='flex items-center gap-3 pb-3 border-b border-black border-dashed' href="/about-us">
                         <Persona2 fill={"white"} />

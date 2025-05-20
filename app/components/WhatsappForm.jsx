@@ -9,7 +9,7 @@ export default function ReservaForm() {
         fechaSalida: "",
       },
     });
-  
+
     const { fields, append, remove } = useFieldArray({
       control,
       name: "pasajeros",
@@ -24,7 +24,7 @@ export default function ReservaForm() {
   
       message += `📅 Fecha de salida: ${data.fechaSalida}\n📅 Fecha de vuelta: ${data.fechaVuelta}\n📞 Teléfono: ${data.telefono}\n📧 Email: ${data.email}`;
   
-      const phoneNumber = "1167877298"; // Reemplaza con el número de WhatsApp destino
+      const phoneNumber = "1165216518"; // Reemplaza con el número de WhatsApp destino
       const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
   
       window.open(url, "_blank");
@@ -33,7 +33,7 @@ export default function ReservaForm() {
     return (
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col items-center justify-center gap-4 p-3 mt-6 text-white b-10">
         {fields.map((field, index) => (
-          <div key={field.id} className="p-2 space-y-2 border rounded-t-xl md:rounded-3xl">
+          <div key={field.id} className="p-2 space-y-2 rounded-t-xl md:rounded-3xl">
             <input {...register(`pasajeros.${index}.nombre`)} placeholder="Nombre" className="w-full px-4 py-2 text-black bg-white border rounded" required />
             <input {...register(`pasajeros.${index}.apellido`)} placeholder="Apellido" className="w-full px-4 py-2 text-black bg-white border rounded" required />
             <input {...register(`pasajeros.${index}.dni`)} placeholder="DNI" className="w-full px-4 py-2 text-black bg-white border rounded" required />

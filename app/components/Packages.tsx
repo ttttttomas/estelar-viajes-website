@@ -1,6 +1,4 @@
 import {assistant} from '@/app/layout'
-import PackageCard from './PackageCard'
-import axios from 'axios'
 
 
 export default function PackagesSierras() {
@@ -11,7 +9,7 @@ export default function PackagesSierras() {
     <section className={`${assistant.className} mx-14`}>
         <h6 className='w-full py-3 text-3xl font-bold tracking-wide text-center rounded-2xl bg-primary'>SIERRAS</h6>
         <div className='flex flex-wrap justify-start gap-10 my-5'>
-            {packages.map((product) => (<PackageCard product={product} key={product.ID} />))}
+            {/* {packages.map((product) => (<PackageCard product={product} key={product.ID} />))} */}
         </div>
     </section>
   )

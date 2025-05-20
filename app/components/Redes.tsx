@@ -21,13 +21,13 @@ export default function Redes() {
         </div>
         <section className={show ? "fixed mr-2 top-[50%] right-0 transition-all z-10" : "fixed mr-2 top-[50%] -right-10 transition-all z-10"}>
             <ul className='flex flex-col gap-3 backdrop-blur-sm'>
-                <Link className={show ? 'transition-all hover:scale-110' : 'transition-all'} href="">
+                <Link className={show ? 'transition-all hover:scale-110' : 'transition-all'} target='_blank' href="https://www.facebook.com/people/Estelar-viajes/61557417986282/#">
                 <Facebook />
                 </Link>
-                <Link className={show ? 'transition-all hover:scale-110' : 'transition-all'} href="">
+                <Link className={show ? 'transition-all hover:scale-110' : 'transition-all'} target='_blank' href="https://www.instagram.com/estelarviajes.sanber/">
                 <Instagram />
                 </Link>
-                <Link className={show ? 'transition-all hover:scale-110' : 'transition-all'} href="">
+                <Link className={show ? 'transition-all hover:scale-110' : 'transition-all'} target='_blank' href="https://wa.me/1165216518">
                 <Wpp />
                 </Link>
             </ul>

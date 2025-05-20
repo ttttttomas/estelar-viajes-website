@@ -1,5 +1,9 @@
 import PaymentsTable from "../components/PaymentsTable"
 import { assistant } from "../layout"
+import { metadata } from '@/app/layout';
+
+  metadata.title = "¿Quienes Somos? - Estelar Viajes" 
+
 
 export default function AboutUsPage() {
   return (

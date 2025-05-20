@@ -1,6 +1,5 @@
 import Link from "next/link";
 import PaymentsTable from "./components/PaymentsTable";
-import Opinions from "./components/home/Opinions";
 import Periodos from "./components/home/Periodos";
 import Destacados from "./components/home/Destacados";
 import Carrusel from "./components/home/Carrusel";
@@ -26,7 +25,7 @@ export default function Home() {
           Nosotros te ayudamos a que esa experiencia sea tan simple de planear como inolvidable de vivir. Porque no se trata solo de elegir un destino, sino de encontrar ese lugar que te haga sentir vivo.
           Anímate. El próximo gran recuerdo de tu vida está un paso más cerca.</p>
       </section>
-      <Opinions />
+      {/* <Opinions /> */}
      <Destacados />
     </main>
   )

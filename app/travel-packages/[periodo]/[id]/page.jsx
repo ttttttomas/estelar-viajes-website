@@ -1,15 +1,26 @@
+'use client'
 import axios from 'axios';
 import WhatsappForm from '../../../components/WhatsappForm'
-// import Loading from "@app/loading";
+import { useEffect, useState } from 'react';
+import { useParams } from 'next/navigation';
 
-export default async function ProductNationalPage({params}: { params: { id: string } }) {
-  console.log(params.id)
-  const response = await axios.get(`https://api-estelar.iwebtecnology.com/products/${params.id}`);
-  const currentProduct = response.data;
+export default function ProductPage() {
+  const [currentProduct, setCurrentProduct] = useState(null);
+  const params = useParams();
+
+  useEffect(() => {
+    const loadProduct = async () => {
+      setCurrentProduct(null);
+      const response = await axios.get(`https://api-estelar.iwebtecnology.com/products/${params.id}`);
+      setCurrentProduct(response.data)
+    };
+    
+    loadProduct();
+  }, []);
 
   return (
     <>
-      {currentProduct ? (
+      {currentProduct && (
         <main key={currentProduct.ID}>
           <img
             src={currentProduct.image}
@@ -18,25 +29,26 @@ export default async function ProductNationalPage({params}: { params: { id: stri
           />
           <section className="flex flex-col gap lg:flex-row">
             <div className="w-full mb-10">
-              <ul className="flex justify-center gap-3 px-8 py-4 text-sm font-semibold text-center text-white bg-opacity-50 bg-tertiary md:gap-32 md:text-base">
+              <ul className="flex justify-center gap-5 px-8 py-4 text-[12px] font-semibold text-center text-white bg-opacity-50 bg-tertiary md:gap-32 md:text-base">
                 <a href="#detalles">Detalles</a>
                 {currentProduct.itinerario && <a href="#itinerario">Itinerario</a>}
                 {currentProduct.incluye && <a href="#incluye">Incluye</a>}
                 {currentProduct.tarifas && <a href="#tarifas">Tarifas</a>}
+                {currentProduct.tarifas && <a href="#fechas">Fechas</a>}
                 {currentProduct.observaciones && <a href="#observaciones">Observaciones</a>}
               </ul>
-              <h2 className="mt-5 text-2xl font-bold tracking-wide text-center text-orangeMedium">
+              <h2 className="mt-5 text-2xl font-bold tracking-wide text-center">
                 {currentProduct.destino}
               </h2>
-              <h3 className="mt-5 text-xl font-bold tracking-wide text-center text-orangeMedium">
-                {currentProduct.subtitulo}
+              <h3 className="mt-5 tracking-wide text-center md:px-52">
+                {currentProduct.descripcion}
               </h3>
               <div className="flex flex-col gap-5">
 
               <div
                 id="detalles"
-                className="w-3/4 mx-auto my-3 shadow-2xl rounded-3xl">
-                <p className="px-4 py-3 text-sm font-medium text-white rounded-t-lg shadow-lg bg-tertiary text-start">
+                className="w-full mx-auto my-3 shadow-2xl md:w-3/4 rounded-3xl">
+                <p className="w-full px-4 py-3 text-sm font-medium text-white rounded-t-lg shadow-lg bg-tertiary text-start">
                   Detalles del paquete
                 </p>
                 <ul className="flex flex-col gap-5 px-4 py-6 text-sm font-semibold">
@@ -47,9 +59,22 @@ export default async function ProductNationalPage({params}: { params: { id: stri
                 </ul>
               </div>
 
+               <div
+                id="fechas"
+                className="w-full mx-auto my-3 shadow-2xl md:w-3/4 rounded-3xl">
+                <p className="w-full px-4 py-3 text-sm font-medium text-white rounded-t-lg shadow-lg bg-tertiary text-start">
+                  Fechas de salida
+                </p>
+                <ul className="flex flex-col gap-5 px-4 py-6 text-sm font-semibold">
+                  {currentProduct.date && <li>{currentProduct.date}</li>}
+                  {currentProduct.date2 && <li>{currentProduct.date2}</li>}
+                  {currentProduct.date3 && <li>{currentProduct.date3}</li>}
+                </ul>
+              </div>
+
               {currentProduct.itinerario && <div
                 id="itinerario"
-                className="w-3/4 mx-auto my-3 shadow-2xl rounded-3xl">
+                className="w-full px-5 mx-auto my-3 shadow-2xl md:w-3/4 rounded-3xl">
                 <p className="px-4 py-3 text-sm font-medium text-white rounded-t-lg shadow-lg bg-tertiary text-start">
                   Itinerario
                 </p>
@@ -67,7 +92,7 @@ export default async function ProductNationalPage({params}: { params: { id: stri
 
               {currentProduct.incluye && <div
                 id="incluye"
-                className="w-3/4 mx-auto my-3 shadow-2xl rounded-3xl">
+                className="w-full mx-auto my-3 shadow-2xl md:w-3/4 rounded-3xl">
                 <p className="px-4 py-3 text-sm font-medium text-white rounded-t-lg shadow-lg bg-tertiary text-start">
                   Incluye
                 </p>
@@ -81,25 +106,25 @@ export default async function ProductNationalPage({params}: { params: { id: stri
 
               {currentProduct.tarifas && <div
                 id="tarifas"
-                className="w-3/4 pb-2 mx-auto my-3 shadow-2xl rounded-3xl">
+                className="w-full mx-auto my-3 shadow-2xl md:w-3/4 rounded-3xl">
                 <p className="px-4 py-3 text-sm font-medium text-white rounded-t-lg shadow-lg bg-tertiary text-start">
                   Tarifas
                 </p>
                 <ul className="flex flex-col gap-2 px-4 pt-6 pb-4 text-sm font-semibold">
-                  {currentProduct.tarifas && <li>{`${currentProduct.tarifas}`}</li>}
-                  {currentProduct.tarifas2 && <li>{`${currentProduct.tarifas2}`}</li>}
-                  {currentProduct.tarifas3 && <li>{`${currentProduct.tarifas3}`}</li>}
-                  {currentProduct.tarifas4 && <li>{`${currentProduct.tarifas4}`}</li>}
+                  {currentProduct.tarifas && <li>{`$${currentProduct.tarifas}.-`}</li>}
+                  {currentProduct.tarifas2 && <li>{`$${currentProduct.tarifas2}.-`}</li>}
+                  {currentProduct.tarifas3 && <li>{`$${currentProduct.tarifas3}.-`}</li>}
+                  {currentProduct.tarifas4 && <li>{`$${currentProduct.tarifas4}.-`}</li>}
                 </ul>
               </div>}
 
               <div
                 id="observaciones"
-                className="w-3/4 pb-6 mx-auto my-3 shadow-2xl rounded-3xl">
+                className="w-full mx-auto my-3 shadow-2xl md:w-3/4 rounded-3xl">
                 <p className="px-4 py-3 text-sm font-medium text-white rounded-t-lg shadow-lg bg-tertiary text-start">
                   Observaciones
                 </p>
-                <ul className="flex flex-col gap-2 px-4 pt-6 text-sm font-semibold">
+                <ul className="flex flex-col gap-2 px-4 pt-6 pb-5 text-sm font-semibold">
                   <li>{`${currentProduct.observaciones}`}</li>
                   <li>{`${currentProduct.observaciones2}`}</li>
                   <li>{`${currentProduct.observaciones3}`}</li>
@@ -121,9 +146,6 @@ export default async function ProductNationalPage({params}: { params: { id: stri
             </div>
           </section>
         </main>
-      ) : (
-        // <Loading />
-        ""
       )}
     </>
   );

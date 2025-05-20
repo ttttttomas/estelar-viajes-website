@@ -1,16 +1,27 @@
 'use client'
-import CalendarDay from "../CalendarCard";
-import Link from "next/link";
+import axios from "axios";
+import DestacadosCard from "../DestacadosCard";
 import {useState, useRef, useEffect} from "react";
+import { Package } from "@/app/types";
 
 export default function Destacados() {
+    const [products, setProducts] = useState<Package[]>([]);
     const [isDragging, setIsDragging] = useState<boolean>(false);
     const [startX, setStartX] = useState<number>(0);
     const [scrollLeft, setScrollLeft] = useState<number>(0);
     const carouselRef = useRef<HTMLUListElement>(null);
     const [isDraggable, setIsDraggable] = useState(true);
 
+
 useEffect(() => {
+  const fetchProducts = async () => {
+      const response = await axios.get(
+        `https://api-estelar.iwebtecnology.com/products`
+      );
+      setProducts(response.data);      
+  }
+  fetchProducts();
+
   const handleResize = () => {
     // Por ejemplo, si el ancho es menor a 768px, lo consideramos mobile
     setIsDraggable(window.innerWidth >= 768);
@@ -93,8 +104,44 @@ useEffect(() => {
       document.body.style.userSelect = '';
     };
         
+   const productsWithDates = products.map((product: Package) => {
+  const meses = [
+    "ENE", "FEB", "MAR", "ABR", "MAY", "JUN",
+    "JUL", "AGOS", "SEPT", "OCT", "NOV", "DIC",
+  ];
+
+  const result = { ...product };
+
+  if (product.date) {
+    const [year, month, day] = product.date.split("-");
+    result.mes = meses[parseInt(month, 10) - 1];
+    result.dia = day;
+    result.year = year
+  } else {
+    console.warn("Producto sin fecha principal:", product);
+  }
+
+  if (product.date2) {
+    const [year2, month2, day2] = product.date2.split("-");
+    result.mes2 = meses[parseInt(month2, 10) - 1];
+    result.dia2 = day2;
+    result.year3 = year2;
+  }
+
+  if (product.date3) {
+    const [year3, month3, day3] = product.date3.split("-");
+    result.mes3 = meses[parseInt(month3, 10) - 1];
+    result.dia3 = day3;
+    result.year3 = year3;
+  }
+
+  return result;
+});
+
+
+
   return (
-    <section className="mb-10" id="destacados">
+    <section className="mx-5 mb-10" id="destacados">
         <p className="my-10 text-2xl font-semibold text-center">NUESTROS PAQUETES DESTACADOS</p>
         <ul 
          ref={carouselRef}
@@ -106,12 +153,9 @@ useEffect(() => {
          onTouchMove={handleTouchMove}
          onTouchEnd={handleTouchEnd}
          className="flex flex-col items-center gap-20 mx-2 overflow-hidden md:mx-0 md:overflow-x-scroll md:flex-row flex-nowrap">
-            {[...Array(6)].map((_, i) => (
-                 <Link key={i} className="bg-paquete h-[200px] w-full md:min-w-[400px] relative rounded-2xl shadow-black/50 shadow-md" href="/">
-                     <CalendarDay day={i+1} month={"Enero"} />
-                     <p className="absolute left-0 right-0 text-xl font-bold text-center text-white top-22 xl:text-3xl">MAR DEL PLATA</p>  
-                 </Link>
-            ))}
+            {productsWithDates.slice(0,6).map((product) => ( 
+              <DestacadosCard key={product.ID} product={product} /> 
+              ))}
         </ul>
     </section>
   )
