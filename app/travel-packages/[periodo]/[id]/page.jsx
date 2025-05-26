@@ -72,24 +72,6 @@ export default function ProductPage() {
                 </ul>
               </div>
 
-              {currentProduct.itinerario && <div
-                id="itinerario"
-                className="w-full px-5 mx-auto my-3 shadow-2xl md:w-3/4 rounded-3xl">
-                <p className="px-4 py-3 text-sm font-medium text-white rounded-t-lg shadow-lg bg-tertiary text-start">
-                  Itinerario
-                </p>
-                <ul className="flex flex-col gap-5 px-4 py-6 text-sm font-semibold">
-                  {currentProduct.itinerario && <li>Dia 1: {currentProduct.itinerario}</li>}
-                  {currentProduct.itinerario2 && <li>Día 2: {currentProduct.itinerario2}</li>}
-                  {currentProduct.itinerario3 && <li>Día 3: {currentProduct.itinerario3}</li>}
-                  {currentProduct.itinerario4 && <li>Día 4: {currentProduct.itinerario4}</li>}
-                  {currentProduct.itinerario5 && <li>Día 5: {currentProduct.itinerario5}</li>}
-                  {currentProduct.itinerario6 && <li>Día 6: {currentProduct.itinerario6}</li>}
-                  {currentProduct.itinerario7 && <li>Día 7: {currentProduct.itinerario7}</li>}
-                  {currentProduct.itinerario8 && <li>Día 8: {currentProduct.itinerario8}</li>}
-                </ul>
-              </div>}
-
               {currentProduct.incluye && <div
                 id="incluye"
                 className="w-full mx-auto my-3 shadow-2xl md:w-3/4 rounded-3xl">
@@ -111,10 +93,10 @@ export default function ProductPage() {
                   Tarifas
                 </p>
                 <ul className="flex flex-col gap-2 px-4 pt-6 pb-4 text-sm font-semibold">
-                  {currentProduct.tarifas && <li>{`$${currentProduct.tarifas}.-`}</li>}
-                  {currentProduct.tarifas2 && <li>{`$${currentProduct.tarifas2}.-`}</li>}
-                  {currentProduct.tarifas3 && <li>{`$${currentProduct.tarifas3}.-`}</li>}
-                  {currentProduct.tarifas4 && <li>{`$${currentProduct.tarifas4}.-`}</li>}
+                  {currentProduct.tarifas && <li>{`${currentProduct.tarifas}.-`}</li>}
+                  {currentProduct.tarifas2 && <li>{`${currentProduct.tarifas2}.-`}</li>}
+                  {currentProduct.tarifas3 && <li>{`${currentProduct.tarifas3}.-`}</li>}
+                  {currentProduct.tarifas4 && <li>{`${currentProduct.tarifas4}.-`}</li>}
                 </ul>
               </div>}
 
@@ -128,6 +110,8 @@ export default function ProductPage() {
                   <li>{`${currentProduct.observaciones}`}</li>
                   <li>{`${currentProduct.observaciones2}`}</li>
                   <li>{`${currentProduct.observaciones3}`}</li>
+                  {currentProduct.itinerario && 
+                  <li>{`${currentProduct.itinerario}.-`}</li>}
                 </ul>
               </div>
               </div>

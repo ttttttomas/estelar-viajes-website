@@ -1,4 +1,3 @@
-import Logo from './Logo'
 import {montserratAlternates} from '@/app/layout'
 import List from './HeaderList'
 import Menu from './icons/Menu'
@@ -10,7 +9,7 @@ export default function Header() {
         <Menu />
       </p>
         <div className='flex flex-row-reverse items-center justify-between w-full h-full gap-5 xl:px-0 xl:w-auto xl:flex-row md:gap-30'>
-            <Logo w="90px"/>
+            <img src="/logo2.png" width={90} alt="logo" />
             <div className={`flex flex-col items-center ${montserratAlternates.className}`}>
                 <h1 className='font-semibold text-md xl:text-2xl'>Estelar Viajes</h1>
                 <small className='text-xs font-medium text-nowrap md:text-normal text-black/60 '>by Mundo Terramar S.R.L</small>

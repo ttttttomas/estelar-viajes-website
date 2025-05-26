@@ -33,7 +33,11 @@ export const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: 'Estelar Viajes',
   description: 'Starter with Tailwind and custom color variables',
-  keywords: [],
+  keywords: ["agencias de viajes", "ofertas de viaje viajes baratos" , "paquetes turísticos", "vacaciones todo incluido" , "tours y excursiones", "mejores destinos turísticos",
+    "viajes turísticos", "viajes de vacaciones", "viajes de vacaciones", "viajes turísticos", "excursiones turísticas", "excursiones turísticas", "excursiones turísticas", "excursiones turísticas",
+    "excursiones turísticas", "excursiones turísticas", "excursiones turísticas", "excursiones turísticas", "excursiones turísticas", "excursiones turísticas", "excursiones turísticas",
+    "excursiones turísticas", "excursiones turísticas", "excursiones turísticas", "excursiones turísticas", "excursiones turísticas", "excursiones turísticas", "excursiones turísticas",
+  ],
   
 }
 
