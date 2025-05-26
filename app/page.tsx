@@ -13,7 +13,7 @@ export default function Home() {
         <Link href="#periodos">Períodos</Link>
         <Link href="#payments">Formas de pago</Link>
         <Link href="#viajar">{'"Viajar"'}</Link>
-        <Link href="#clients">Clientes</Link>
+        {/* <Link href="#clients">Clientes</Link> */}
         <Link href="#destacados">Destacados</Link>
       </ul>
       <Carrusel />
