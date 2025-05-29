@@ -24,7 +24,7 @@ export default function ReservaForm() {
   
       message += `📅 Fecha de salida: ${data.fechaSalida}\n📅 Fecha de vuelta: ${data.fechaVuelta}\n📞 Teléfono: ${data.telefono}\n📧 Email: ${data.email}`;
   
-      const phoneNumber = "1165216518"; // Reemplaza con el número de WhatsApp destino
+      const phoneNumber = "1171138145"; // Reemplaza con el número de WhatsApp destino
       const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
   
       window.open(url, "_blank");
