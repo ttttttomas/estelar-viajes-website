@@ -21,7 +21,7 @@ export default function ContactPage() {
         console.log("enviado");
         setTimeout(() => {
             router.push("/");
-        }, 3000);
+        }, 2000);
     } catch (error) {
         console.error("Error al enviar formulario:", error);
         toast.error('Error al enviar formulario');

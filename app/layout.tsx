@@ -32,7 +32,7 @@ export const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: 'Estelar Viajes',
-  description: 'Starter with Tailwind and custom color variables',
+  description: 'En Estelar Viajes convertimos tus sueños en destinos. Somos una agencia de turismo dedicada a ofrecer experiencias inolvidables, combinando comodidad, calidad y un servicio personalizado que se adapta a tus necesidades. Desde paquetes turísticos completos hasta asesoramiento en cada detalle, te acompañamos en cada paso para que disfrutes de un viaje sin preocupaciones. ¡Descubrí el mundo con nosotros y viví experiencias estelares!',
   keywords: ["agencias de viajes", "ofertas de viaje viajes baratos" , "paquetes turísticos", "vacaciones todo incluido" , "tours y excursiones", "mejores destinos turísticos",
     "viajes turísticos", "viajes de vacaciones", "viajes de vacaciones", "viajes turísticos", "excursiones turísticas", "excursiones turísticas", "excursiones turísticas", "excursiones turísticas",
     "excursiones turísticas", "excursiones turísticas", "excursiones turísticas", "excursiones turísticas", "excursiones turísticas", "excursiones turísticas", "excursiones turísticas",

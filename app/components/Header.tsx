@@ -4,7 +4,7 @@ import Menu from './icons/Menu'
 
 export default function Header() {
   return (
-    <header className='fixed top-0 z-10 flex items-center justify-around w-full gap-10 px-2 py-3 md:px-10 backdrop-blur-xs'>
+    <header className='fixed top-0 z-10 flex items-center justify-around w-full gap-10 px-2 py-3 bg-secondary md:px-10 backdrop-blur-xs'>
       <p className='block xl:hidden'>
         <Menu />
       </p>

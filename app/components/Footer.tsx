@@ -3,7 +3,7 @@ import Logo from './Logo'
 import Cell from './icons/Cell'
 import Buzon from './icons/Buzon'
 import Home from './icons/Home'
-import Persona1 from './icons/Persona1'
+// import Persona1 from './icons/Persona1'
 import Persona2 from './icons/Persona2'
 import Contact from './icons/Contact'
 import { moonDance } from '../layout'
@@ -54,9 +54,9 @@ export default function Footer() {
             <Link className='flex items-center gap-5 text-sm underline md:text-medium' href="/">
             <Home fill={"black"}/>
             Inicio</Link>
-            <Link className='flex items-center gap-5 text-sm underline md:text-medium' href="/travel-packages">
+            {/* <Link className='flex items-center gap-5 text-sm underline md:text-medium' href="/travel-packages">
             <Persona1 fill={"black"} />
-            Paquetes</Link>
+            Paquetes</Link> */}
             <Link className='flex items-center gap-5 text-sm underline md:text-medium' href="/about-us">
             <Persona2 fill={"black"} />
             ¿Quienes Somos?</Link>

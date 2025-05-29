@@ -8,7 +8,7 @@ import Carrusel from "./components/home/Carrusel";
 export default function Home() {
   return (
     <main>
-      <ul className="justify-between hidden py-1 font-medium text-white md:flex px-15 bg-tertiary">
+      <ul className="fixed z-5 justify-between hidden w-full py-1 font-medium text-white top-[115px] md:flex px-15 bg-tertiary">
         <Link href="/">Inicio</Link>
         <Link href="#periodos">Períodos</Link>
         <Link href="#payments">Formas de pago</Link>
