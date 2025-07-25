@@ -20,7 +20,7 @@ export default function HeaderList() {
         <Link onClick={() => setShow(!show)} className='p-1 text-center border rounded-lg cursor-pointer w-34 text-tertiary bg-secondary border-tertiary' href="/sierra">Sierras</Link>
         <Link onClick={() => setShow(!show)} className='p-1 text-center border rounded-lg cursor-pointer w-34 text-tertiary bg-secondary border-tertiary' href="/cordillera">Cordillera</Link>
         <Link onClick={() => setShow(!show)} className='p-1 text-center border rounded-lg cursor-pointer w-34 text-tertiary bg-secondary border-tertiary' href="/costa">Costa</Link>
-        <Link onClick={() => setShow(!show)} className='p-1 text-center border rounded-lg cursor-pointer w-34 text-tertiary bg-secondary border-tertiary' href="/internacional">Internacionales</Link>
+        <Link onClick={() => setShow(!show)} className='p-1 text-center border rounded-lg cursor-pointer w-34 text-tertiary bg-secondary border-tertiary' href="/miniturismo">MiniTurismo</Link>
     </div>
     </div>
   )

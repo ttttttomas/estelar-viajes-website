@@ -8,7 +8,7 @@ export default function MiniturismoPage() {
 
     useEffect(() => {
       const loadProduct = async () => {
-        const response = await axios.get(`https://api-estelar.iwebtecnology.com/products/periodo/internacional`);
+        const response = await axios.get(`https://api-estelar.iwebtecnology.com/products/periodo/miniturismo`);
         setPackages(response.data)
       };
       

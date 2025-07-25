@@ -44,7 +44,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="es">
-      <body className={`bg-secondary py-32 ${montserrat.className}`}>
+      <body className={`bg-[#DDECF5] py-32 ${montserrat.className}`}>
         <AsideContextProvider>
         <Header />
         <Aside />

@@ -37,7 +37,7 @@ export default function Footer() {
           <p className="text-xl font-bold">Contacto</p>
           <li className="flex items-center gap-5 text-sm md:text-normal">
             <Cell />
-            11-6521-6518
+            11 3558-7877
           </li>
            <li className="flex items-center gap-5 text-sm md:text-normal">
             <Link href="mailto:info@estelarviajes.com">
