@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import PeriodosPack from '../components/PeriodosPack';
 
-export default function SierraPage() {
+export default function MiniturismoPage() {
     const [packages, setPackages] = useState([]);
 
     useEffect(() => {
