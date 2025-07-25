@@ -18,6 +18,7 @@ export default async function CarteleraPage() {
   
     return (
       <main className="flex flex-wrap justify-center mx-20">
+        {!cartelera && <p>No hay cartelera.</p>}
         <h1 className="w-full mx-auto text-2xl font-bold text-center">Cartelera</h1>
           <p className="w-full mx-auto my-5 text-xl font-bold text-center underline">INTERNACIONALES</p>
           <div className="flex flex-wrap items-center justify-start gap-10 mx-auto my-5">

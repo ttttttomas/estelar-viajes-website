@@ -16,7 +16,7 @@ export default function Periodos() {
           <Link className="w-64 transition-all md:hover:scale-105" href="/costa">
             <img src="costa.webp"  className='object-cover w-full'alt="" />
           </Link>
-          <Link className="w-64 transition-all md:hover:scale-105" href="/internacional">
+          <Link className="w-64 transition-all md:hover:scale-105" href="/miniturismo">
             <img src="periodo4.png"  className='object-cover w-full'alt="" />
           </Link>
         </div>

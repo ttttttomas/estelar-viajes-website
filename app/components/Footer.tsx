@@ -39,18 +39,19 @@ export default function Footer() {
             <Cell />
             11-6521-6518
           </li>
-          <li className="flex items-center gap-5 text-sm md:text-normal">
-            <Link href="mailto:reservas@estelarviajes.com">
-              <Buzon />
-            </Link>
-            reservas@estelarviajes.com
-          </li>
-          <li className="flex items-center gap-5 text-sm md:text-normal">
+           <li className="flex items-center gap-5 text-sm md:text-normal">
             <Link href="mailto:info@estelarviajes.com">
               <Buzon />
             </Link>
             info@estelarviajes.com
           </li>
+          <li className="flex items-center gap-5 text-sm md:text-normal">
+            <Link href="mailto:gerencia@estelarviajes.com">
+              <Buzon />
+            </Link>
+            gerencia@estelarviajes.com
+          </li>
+         
         </ul>
         <ul className="flex flex-col justify-between gap-5 md:gap-0">
           <p className="text-xl font-bold">Mapa del sitio</p>
@@ -82,7 +83,7 @@ export default function Footer() {
       </section>
       <div className="flex flex-col items-center justify-center gap-5 mt-5">
         <p className={`md:text-xl ${moonDance.className}`}>
-          Razon social: MUNDO TERRAMAR S.R.L - Cuit: 30-71637562-1{" "}
+          Razon social: Bargiu S.R.L - Cuit: 30-71794850-1
         </p>
         <Link
           href="https://iwebtecnology.com"
