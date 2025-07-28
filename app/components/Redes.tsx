@@ -27,7 +27,7 @@ export default function Redes() {
                 <Link className={show ? 'transition-all hover:scale-110' : 'transition-all'} target='_blank' href="https://www.instagram.com/estelarviajes.sanber/">
                 <Instagram />
                 </Link>
-                <Link className={show ? 'transition-all hover:scale-110' : 'transition-all'} target='_blank' href="https://wa.me/1165216518">
+                <Link className={show ? 'transition-all hover:scale-110' : 'transition-all'} target='_blank' href="https://wa.me/+541135587877">
                 <Wpp />
                 </Link>
             </ul>

@@ -6,9 +6,9 @@ import {Montserrat_Alternates} from 'next/font/google'
 import Link from 'next/link'
 import Home from './icons/Home'
 import ArrowAside from './icons/ArrowAside'
-import Facebook from './icons/Redes/Facebook'
-import Wpp from './icons/Redes/Wpp'
-import Instagram from './icons/Redes/Instagram'
+// import Facebook from './icons/Redes/Facebook'
+// import Wpp from './icons/Redes/Wpp'
+// import Instagram from './icons/Redes/Instagram'
 import Logo from './Logo'
 import Persona1 from './icons/Persona1'
 import Persona2 from './icons/Persona2'
@@ -36,7 +36,7 @@ export default function AsideClient() {
                 </p>
                 <div>
                     <p className={`font-semibold text-lg px-3 ${montserratAlternates.className}`}>Estelar Viajes</p>
-                    <small className={`px-3 text-black/60`}>by Mundo Terramar S.R.L</small>
+                    <small className={`px-3 text-black/60`}>by Bargiu S.R.L</small>
                 </div>
                 <ul className={`px-3 py-10 gap-5 ${montserratAlternates.className} flex flex-col`}>
                     <Link onClick={handleClick} className='flex items-center gap-3 pb-3 border-b border-black border-dashed' href="/">
@@ -52,7 +52,7 @@ export default function AsideClient() {
                             <Link onClick={handleClick} href="/sierra">Sierras</Link>
                             <Link onClick={handleClick} href="/cordillera">Cordillera</Link>
                             <Link onClick={handleClick} href="/costa">Costas</Link>
-                            <Link onClick={handleClick} href="/internacional">Internacionales</Link>
+                            <Link onClick={handleClick} href="/miniturismo">MiniTurismo</Link>
                         </ul>
                     <Link onClick={handleClick} className='flex items-center gap-3 pb-3 border-b border-black border-dashed' href="/about-us">
                         <Persona2 fill={"white"} />
@@ -63,7 +63,7 @@ export default function AsideClient() {
                         <p className="font-medium text-white text-md">Contacto</p>
                     </Link>
                 </ul>
-                <ul className='flex flex-col items-start gap-3 px-3'>
+                {/* <ul className='flex flex-col items-start gap-3 px-3'>
                     <Link target='_blank' className='flex items-center gap-3 text-sm' href="https://www.facebook.com/profile.php?id=61557417986282#">
                         <Facebook />
                         <p>Estelar Viajes</p>
@@ -76,7 +76,7 @@ export default function AsideClient() {
                         <Wpp />
                         <p>+54 9 11-6521-6518</p>
                     </Link>
-                </ul>
+                </ul> */}
                 <div className='flex items-center justify-center gap-5 mt-5'>
                     <Logo w={"80px"}/>
                 </div>
