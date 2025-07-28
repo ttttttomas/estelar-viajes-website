@@ -4,9 +4,11 @@ import { Metadata } from 'next'
 import { ReactNode } from 'react'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import Redes from './components/Redes'
+import Wpp from './components/icons/Redes/Wpp'
+// import Redes from './components/Redes'
 import AsideContextProvider from './context/AsideContext'
 import Aside from './components/Aside'
+import Link from 'next/link'
 
 export const montserratAlternates = Montserrat_Alternates({
   subsets: ['latin'],
@@ -49,7 +51,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Header />
         <Aside />
         {children}
-        <Redes />
+        {/* <Redes /> */}
+        <Link className='fixed z-10 bottom-5 right-5 rounded-full' target='_blank' href="https://wa.me/+541135587877">
+          <Wpp />
+        </Link>
         <Footer />
         </AsideContextProvider>
         </body>
