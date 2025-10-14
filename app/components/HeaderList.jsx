@@ -21,6 +21,8 @@ export default function HeaderList() {
         <Link onClick={() => setShow(!show)} className='p-1 text-center border rounded-lg cursor-pointer w-34 text-tertiary bg-secondary border-tertiary' href="/cordillera">Cordillera</Link>
         <Link onClick={() => setShow(!show)} className='p-1 text-center border rounded-lg cursor-pointer w-34 text-tertiary bg-secondary border-tertiary' href="/costa">Costa</Link>
         <Link onClick={() => setShow(!show)} className='p-1 text-center border rounded-lg cursor-pointer w-34 text-tertiary bg-secondary border-tertiary' href="/miniturismo">MiniTurismo</Link>
+        <Link onClick={() => setShow(!show)} className='p-1 text-center border rounded-lg cursor-pointer w-34 text-tertiary bg-secondary border-tertiary' href="/verano2026">Verano 2026</Link>
+        <Link onClick={() => setShow(!show)} className='p-1 text-center border rounded-lg cursor-pointer w-34 text-tertiary bg-secondary border-tertiary' href="/findeanio">Fin de año</Link>
     </div>
     </div>
   )

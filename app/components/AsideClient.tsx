@@ -53,6 +53,8 @@ export default function AsideClient() {
                             <Link onClick={handleClick} href="/cordillera">Cordillera</Link>
                             <Link onClick={handleClick} href="/costa">Costas</Link>
                             <Link onClick={handleClick} href="/miniturismo">MiniTurismo</Link>
+                            <Link onClick={handleClick} href="/verano2026">Verano 2026</Link>
+                            <Link onClick={handleClick} href="/findeanio">Fin de año</Link>
                         </ul>
                     <Link onClick={handleClick} className='flex items-center gap-3 pb-3 border-b border-black border-dashed' href="/about-us">
                         <Persona2 fill={"white"} />
