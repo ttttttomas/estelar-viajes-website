@@ -8,17 +8,36 @@ type Cartelera = {
 };
 
 export default async function CarteleraPage() {
+  let carteleraData: Cartelera[] = [];
 
-  const cartelera = await axios.get(`https://api-estelar.iwebtecnology.com/cartelera`);
+  let carteleraInternacionales: Cartelera[] = [];
+  let carteleraSierras: Cartelera[] = [];
+  let carteleraCordilleras: Cartelera[] = [];
+  let carteleraCosta: Cartelera[] = [];
 
-  const carteleraInternacionales = cartelera.data.filter((cartelera: Cartelera) => cartelera.periodo === "internacional" || cartelera.periodo === "Internacional");
-  const carteleraSierras = cartelera.data.filter((cartelera: Cartelera) => cartelera.periodo === "Sierras" || cartelera.periodo === "Sierra");
-  const carteleraCordilleras = cartelera.data.filter((cartelera: Cartelera) => cartelera.periodo === "Cordillera");
-  const carteleraCosta = cartelera.data.filter((cartelera: Cartelera) => cartelera.periodo === "Costa");
+  try {
+    const res = await axios.get<Cartelera[]>(
+      "https://api-estelar.iwebtecnology.com/cartelera"
+    );
+
+    carteleraData = res.data;
+
+    carteleraInternacionales = carteleraData.filter(
+      (c) => c.periodo === "internacional" || c.periodo === "Internacional"
+    );
+    carteleraCordilleras = carteleraData.filter((c) => c.periodo === "Cordillera");
+    carteleraCosta = carteleraData.filter((c) => c.periodo === "Costa");
+    carteleraSierras = carteleraData.filter(
+      (c) => c.periodo === "Sierras" || c.periodo === "Sierra"
+    );
+  } catch (error) {
+    console.error("Error cargando cartelera:", error);
+    // quedan vacíos y no rompe el render
+  }
   
     return (
       <main className="flex flex-wrap justify-center mx-20">
-        {!cartelera && <p>No hay cartelera.</p>}
+        {/* {!cartelera && <p>No hay cartelera.</p>} */}
         <h1 className="w-full mx-auto text-2xl font-bold text-center">Cartelera</h1>
           <p className="w-full mx-auto my-5 text-xl font-bold text-center underline">INTERNACIONALES</p>
           <div className="flex flex-wrap items-center justify-start gap-10 mx-auto my-5">
